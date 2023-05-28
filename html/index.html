@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>blackcraft</title>
+	<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="style.css"/>
+	<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+	<script src="script.js" type="text/javascript"></script>
+</head>
+<body>
+	<div id="window">
+		<div id="title"><span>BLACK CRAFT</span></div>
+		<img src="img/logo.png" style="position:absolute;width:200px;height:145px;top:5px;left:50px;">
+		<img src="img/line.png" style="position:absolute;width:1500px;height:300px;top:5px;left:0px;">
+		<img src="img/line.png" style="position:absolute;width:900px;height:300px;top:290px;left:-150px; transform:rotate(-90deg);">
+		<div id="change-btn-knuckle">
+			<img src="img/weapon_knuckle.png" style="position: absolute;width:200px;height:100px;">
+		</div>
+		<div id="change-btn-appistol">
+			<img src="img/weapon_appistol.png" style="position: absolute;width:200px;height:100px;">
+		</div>
+		<div id="change-btn-smg">
+			<img src="img/weapon_smg.png" style="position: absolute;width:200px;height:100px;">
+		</div>
+		<div id="change-btn-sawnoffshotgun">
+			<img src="img/weapon_sawnoffshotgun.png" style="position: absolute;width:200px;height:100px;">
+		</div>
+		<div id="change-btn-carbinerifle_mk2">
+			<img src="img/weapon_carbinerifle_mk2.png" style="position: absolute;width:200px;height:100px;">
+		</div>
+		<div id="change-btn-gusenberg">
+			<img src="img/weapon_gusenberg.png" style="position: absolute;width:200px;height:100px;">
+		</div>
+		<div id="rnb-box">
+			<div id="text"><span>Welcome to Black Craft. Select category to craft/buy your gun</span></div>
+			<img src="img/logo2.png" style="position:absolute;width:500px;height:450px;top:80px;left:300px;">
+		</div>
+		<div id="rnb-box-knuckle" style="display: none;">
+			<div id="requirements" style="color: blue;"><span>REQUIREMENTS</span></div>
+			<div id="items" style="color: red;"><span>IRON (1+) <br> FRAME (1+) <br> PLASTIC (1+) <br> GUNPOWDER (1+)</span></div>
+			<div id="price" style="color: blue;"><span>PRICE</span></div>
+			<div id="pr" style="color: red;"><span>1000 BM</span></div>
+			<img src="img/weapon_knuckle.png" style="position:absolute;width:350px;height:350px;top:80px;left:100px;">
+			<button class="craft-btn" onclick="SwitchBtn('knuckle')"><span>CRAFT</span></button>
+			<button class="buy-btn" onclick="SwitchBtn('buyknuckle')"><span>BUY</span></button>
+		</div>
+		<div id="rnb-box-appistol" style="display: none;">
+			<div id="requirements" style="color: blue;"><span>REQUIREMENTS</span></div>
+			<div id="items" style="color: red;"><span>IRON (5+) <br> FRAME (5+) <br> PLASTIC (5+) <br> GUNPOWDER (5+)</span></div>
+			<div id="price" style="color: blue;"><span>PRICE</span></div>
+			<div id="pr" style="color: red;"><span>1000 BM</span></div>
+			<img src="img/weapon_appistol.png" style="position:absolute;width:350px;height:350px;top:80px;left:100px;">
+			<button class="craft-btn" onclick="SwitchBtn('appistol')"><span>CRAFT</span></button>
+			<button class="buy-btn" onclick="SwitchBtn('buyappistol')"><span>BUY</span></button>
+		</div>
+		<div id="rnb-box-smg" style="display: none;">
+			<div id="requirements" style="color: blue;"><span>REQUIREMENTS</span></div>
+			<div id="items" style="color: red;"><span>IRON (10+) <br> FRAME (10+) <br> PLASTIC (10+) <br> GUNPOWDER (10+)</span></div>
+			<div id="price" style="color: blue;"><span>PRICE</span></div>
+			<div id="pr" style="color: red;"><span>1000 BM</span></div>
+			<img src="img/weapon_smg.png" style="position:absolute;width:350px;height:350px;top:80px;left:100px;">
+			<button class="craft-btn" onclick="SwitchBtn('smg')"><span>CRAFT</span></button>
+			<button class="buy-btn" onclick="SwitchBtn('buysmg')"><span>BUY</span></button>
+		</div>
+		<div id="rnb-box-sawnoffshotgun" style="display: none;">
+			<div id="requirements" style="color: blue;"><span>REQUIREMENTS</span></div>
+			<div id="items" style="color: red;"><span>IRON (15+) <br> FRAME (15+) <br> PLASTIC (15+) <br> GUNPOWDER (15+)</span></div>
+			<div id="price" style="color: blue;"><span>PRICE</span></div>
+			<div id="pr" style="color: red;"><span>1000 BM</span></div>
+			<img src="img/weapon_sawnoffshotgun.png" style="position:absolute;width:350px;height:350px;top:80px;left:100px;">
+			<button class="craft-btn" onclick="SwitchBtn('sawnoffshotgun')"><span>CRAFT</span></button>
+			<button class="buy-btn" onclick="SwitchBtn('buysawnoffshotgun')"><span>BUY</span></button>
+		</div>
+		<div id="rnb-box-carbinerifle_mk2" style="display: none;">
+			<div id="requirements" style="color: blue;"><span>REQUIREMENTS</span></div>
+			<div id="items" style="color: red;"><span>IRON (20+) <br> FRAME (20+) <br> PLASTIC (20+) <br> GUNPOWDER (20+)</span></div>
+			<div id="price" style="color: blue;"><span>PRICE</span></div>
+			<div id="pr" style="color: red;"><span>1000 BM</span></div>
+			<img src="img/weapon_carbinerifle_mk2.png" style="position:absolute;width:350px;height:350px;top:80px;left:100px;">
+			<button class="craft-btn" onclick="SwitchBtn('carbinerifle_mk2')"><span>CRAFT</span></button>
+			<button class="buy-btn" onclick="SwitchBtn('buycarbinerifle_mk2')"><span>BUY</span></button>
+		</div>
+		<div id="rnb-box-gusenberg" style="display: none;">
+			<div id="requirements" style="color: blue;"><span>REQUIREMENTS</span></div>
+			<div id="items" style="color: red;"><span>IRON (30+) <br> FRAME (30+) <br> PLASTIC (30+) <br> GUNPOWDER (30+)</span></div>
+			<div id="price" style="color: blue;"><span>PRICE</span></div>
+			<div id="pr" style="color: red;"><span>1000 BM</span></div>
+			<img src="img/weapon_gusenberg.png" style="position:absolute;width:350px;height:350px;top:80px;left:100px;">
+			<button class="craft-btn" onclick="SwitchBtn('gusenberg')"><span>CRAFT</span></button>
+			<button class="buy-btn" onclick="SwitchBtn('buygusenberg')"><span>BUY</span></button>
+		</div>
+	</div>
+</body>
+</html>
